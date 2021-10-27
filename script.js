@@ -47,7 +47,7 @@ let checkOrder = () =>{
     }
 
     if (clickedOrder.length == order.length) {
-        alert('Pontuação: $(score)\nVocê acertou! Iniciando próximo nível!');
+        alert(`Pontuação: ${score}\nVocê acertou! Iniciando próximo nível!`);
         nextLevel();
     }
 }
@@ -60,10 +60,9 @@ let click = (color) =>{
 
     setTimeout(() =>{
         createColorElement(color).classList.remove('selected');
+        checkOrder();
+    },250);
 
-    })
-
-    checkOrder();
 }
 
 //funcao que retorna a cor
